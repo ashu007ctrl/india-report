@@ -4,15 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact India Report with your questions, feedback, or suggestions via email, phone, or social media." />
-  <meta name="keywords" content="Contact India Report, political website contact, reach out, get in touch, political blog email" />
-  <meta property="og:title" content="Contact Us – India Report" />
-  <meta property="og:description" content="Reach out to the team at India Report. We welcome your feedback and inquiries." />
+  <meta name="description" content="Get in touch with the India Report team for tips, media/press requests, partnerships, or general feedback. We aim to respond promptly." />
+  <meta name="keywords" content="India Report contact, media inquiries, press contact, partnerships, feedback, political analysis contact" />
+  <meta name="author" content="India Report" />
+  <meta property="og:title" content="Get in Touch – India Report" />
+  <meta property="og:description" content="Reach the India Report editorial team with questions, story tips, or collaboration ideas." />
   <meta property="og:image" content="https://indiareport.netlify.app/images/contact-banner.jpg" />
   <meta property="og:url" content="https://indiareport.netlify.app/contact.html" />
+  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Get in Touch – India Report" />
+  <meta name="twitter:description" content="Questions or suggestions? Contact India Report for feedback, tips, and media requests." />
+  <meta name="twitter:image" content="https://indiareport.netlify.app/images/contact-banner.jpg" />
   <meta name="robots" content="index, follow">
-  <title>Contact Us - India Report</title>
+  <title>Get in Touch - India Report</title>
   <link rel="canonical" href="https://indiareport.netlify.app/contact.html" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -43,28 +48,28 @@
 
   <div class="main-content reveal">
     <section>
-      <h1 class="reveal">Contact Us</h1>
-      <p class="reveal">If you have any questions, suggestions, or feedback, feel free to reach out to us using the contact details below.</p>
+      <h1 class="reveal">Contact the India Report Team</h1>
+      <p class="reveal">Have a story tip, correction, partnership idea, or general feedback? We’re glad to hear from you. Use the details below and we’ll get back to you soon.</p>
 
       <h2 class="reveal">Email</h2>
       <p class="reveal"><a href="mailto:ashu.8642.ap@gmail.com">ashu.8642.ap@gmail.com</a></p>
 
       <h2 class="reveal">Phone</h2>
-      <p class="reveal">+91 6307607925</p>
+      <p class="reveal"><a href="tel:+916307607925">+91 6307607925</a> — Mon–Fri, 10:00–18:00 IST</p>
 
       <h2 class="reveal">Address</h2>
       <p class="reveal">
         Near BBD University<br />
         Ayodhya Road<br />
-        Lucknow, Uttar Pradesh
+        Lucknow, Uttar Pradesh, India
       </p>
 
       <h2 class="reveal">Social Media</h2>
-      <p class="reveal">Follow us on:</p>
+      <p class="reveal">Connect with us and follow updates:</p>
       <ul class="reveal">
-        <li><a href="#" target="_blank">Twitter</a></li>
-        <li><a href="#" target="_blank">Facebook</a></li>
-        <li><a href="#" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank" rel="noopener">X (Twitter)</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </section>
   </div>
@@ -79,22 +84,43 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "India Report",
-      "url": "https://indiareport.netlify.app",
-      "email": "ashu.8642.ap@gmail.com",
-      "telephone": "+91 6307607925",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Near BBD University, Ayodhya Road",
-        "addressLocality": "Lucknow",
-        "addressRegion": "Uttar Pradesh",
-        "addressCountry": "India"
-      },
-      "sameAs": [
-        "https://twitter.com/yourprofile",
-        "https://facebook.com/yourprofile",
-        "https://linkedin.com/company/yourprofile"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://indiareport.netlify.app/#org",
+          "name": "India Report",
+          "url": "https://indiareport.netlify.app",
+          "email": "ashu.8642.ap@gmail.com",
+          "telephone": "+91 6307607925",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Near BBD University, Ayodhya Road",
+            "addressLocality": "Lucknow",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://twitter.com/IndiaReportHQ",
+            "https://facebook.com/IndiaReportHQ",
+            "https://linkedin.com/company/india-report"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://indiareport.netlify.app/#website",
+          "url": "https://indiareport.netlify.app",
+          "name": "India Report",
+          "publisher": { "@id": "https://indiareport.netlify.app/#org" }
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://indiareport.netlify.app/contact.html#contact",
+          "url": "https://indiareport.netlify.app/contact.html",
+          "name": "Get in Touch – India Report",
+          "description": "Contact the India Report team for tips, media requests, partnerships, corrections, and feedback.",
+          "isPartOf": { "@id": "https://indiareport.netlify.app/#website" },
+          "publisher": { "@id": "https://indiareport.netlify.app/#org" }
+        }
       ]
     }
   </script>
