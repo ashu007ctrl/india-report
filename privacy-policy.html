@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for India Report - Learn how we collect, use, and protect your personal information." />
+  <meta name="keywords" content="Privacy Policy, India Report, data protection, personal information" />
+  <meta property="og:title" content="Privacy Policy – India Report" />
+  <meta property="og:description" content="Our commitment to protecting your privacy and personal information." />
+  <meta property="og:url" content="https://indiareport.netlify.app/privacy-policy.html" />
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy - India Report</title>
+  <link rel="canonical" href="https://indiareport.netlify.app/privacy-policy.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <header>
+    <nav class="modern-navbar" id="site-nav" aria-label="Primary">
+       <div class="brand">INDIA REPORT</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About Me</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content reveal">
+    <section>
+      <h1 class="reveal">Privacy Policy</h1>
+      <p class="reveal"><strong>Last updated:</strong> August 18, 2025</p>
+
+      <p class="reveal">At India Report, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+
+      <h2 class="reveal">Information We Collect</h2>
+      <p class="reveal">We may collect the following types of information:</p>
+      <ul class="reveal">
+        <li>Information you provide voluntarily (such as comments or contact forms)</li>
+        <li>Automatically collected information (such as IP address, browser type, and usage data)</li>
+        <li>Cookies and similar tracking technologies</li>
+      </ul>
+
+      <h2 class="reveal">How We Use Your Information</h2>
+      <p class="reveal">We use the collected information to:</p>
+      <ul class="reveal">
+        <li>Provide and maintain our website</li>
+        <li>Improve user experience</li>
+        <li>Analyze website usage and trends</li>
+        <li>Respond to your inquiries and feedback</li>
+      </ul>
+
+      <h2 class="reveal">Information Sharing</h2>
+      <p class="reveal">We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+
+      <h2 class="reveal">Data Security</h2>
+      <p class="reveal">We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+
+      <h2 class="reveal">Cookies</h2>
+      <p class="reveal">We use cookies to enhance your browsing experience. You can control cookie settings through your browser preferences.</p>
+
+      <h2 class="reveal">Third-Party Links</h2>
+      <p class="reveal">Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites.</p>
+
+      <h2 class="reveal">Changes to This Policy</h2>
+      <p class="reveal">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+
+      <h2 class="reveal">Contact Us</h2>
+      <p class="reveal">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:ashu.8642.ap@gmail.com">ashu.8642.ap@gmail.com</a>.</p>
+    </section>
+  </div>
+
+  <footer>
+  <p><span>&copy; 2025 INDIA REPORT</span> 
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="terms-of-use.html">Terms of Use</a>
+    </p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+    const siteNav = document.getElementById('site-nav');
+
+    // Mobile menu toggle + accessibility
+    const toggleMenu = () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      // trap focus basic: focus first link when opening
+      if (isOpen) {
+        const firstLink = navLinks.querySelector('a');
+        firstLink && firstLink.focus();
+      }
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Navbar scroll state
+    const handleScroll = () => {
+      if (window.scrollY > 6) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Reveal on scroll
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+
+</html>

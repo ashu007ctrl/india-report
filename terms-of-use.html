@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terms of Use for India Report - Read our terms and conditions for using our website and services." />
+  <meta name="keywords" content="Terms of Use, India Report, terms and conditions, website usage" />
+  <meta property="og:title" content="Terms of Use – India Report" />
+  <meta property="og:description" content="Terms and conditions for using India Report website and services." />
+  <meta property="og:url" content="https://indiareport.netlify.app/terms-of-use.html" />
+  <meta name="robots" content="index, follow">
+  <title>Terms of Use - India Report</title>
+  <link rel="canonical" href="https://indiareport.netlify.app/terms-of-use.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <header>
+    <nav class="modern-navbar" id="site-nav" aria-label="Primary">
+       <div class="brand">INDIA REPORT</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About Me</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content reveal">
+    <section>
+      <h1 class="reveal">Terms of Use</h1>
+      <p class="reveal"><strong>Last updated:</strong> August 18, 2025</p>
+
+      <p class="reveal">Welcome to India Report. By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+
+      <h2 class="reveal">Acceptance of Terms</h2>
+      <p class="reveal">By using our website, you agree to these Terms of Use. If you do not agree with any part of these terms, please do not use our website.</p>
+
+      <h2 class="reveal">Use License</h2>
+      <p class="reveal">Permission is granted to temporarily download one copy of the materials on India Report's website for personal, non-commercial transitory viewing only.</p>
+
+      <h2 class="reveal">Disclaimer</h2>
+      <p class="reveal">The materials on India Report's website are provided on an 'as is' basis. India Report makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+
+      <h2 class="reveal">Limitations</h2>
+      <p class="reveal">In no event shall India Report or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on India Report's website.</p>
+
+      <h2 class="reveal">Accuracy of Materials</h2>
+      <p class="reveal">The materials appearing on India Report's website could include technical, typographical, or photographic errors. India Report does not warrant that any of the materials on its website are accurate, complete, or current.</p>
+
+      <h2 class="reveal">Links</h2>
+      <p class="reveal">India Report has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by India Report of the site.</p>
+
+      <h2 class="reveal">Modifications</h2>
+      <p class="reveal">India Report may revise these terms of use for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms of Use.</p>
+
+      <h2 class="reveal">Contact Information</h2>
+      <p class="reveal">If you have any questions about these Terms of Use, please contact us at <a href="mailto:ashu.8642.ap@gmail.com">ashu.8642.ap@gmail.com</a>.</p>
+    </section>
+  </div>
+
+  <footer>
+  <p><span>&copy; 2025 INDIA REPORT</span> 
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="terms-of-use.html">Terms of Use</a>
+    </p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+    const siteNav = document.getElementById('site-nav');
+
+    // Mobile menu toggle + accessibility
+    const toggleMenu = () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      // trap focus basic: focus first link when opening
+      if (isOpen) {
+        const firstLink = navLinks.querySelector('a');
+        firstLink && firstLink.focus();
+      }
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Navbar scroll state
+    const handleScroll = () => {
+      if (window.scrollY > 6) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Reveal on scroll
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+
+</html>

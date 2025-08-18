@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact India Report with your questions, feedback, or suggestions via email, phone, or social media." />
+  <meta name="keywords" content="Contact India Report, political website contact, reach out, get in touch, political blog email" />
+  <meta property="og:title" content="Contact Us – India Report" />
+  <meta property="og:description" content="Reach out to the team at India Report. We welcome your feedback and inquiries." />
+  <meta property="og:image" content="https://indiareport.netlify.app/images/contact-banner.jpg" />
+  <meta property="og:url" content="https://indiareport.netlify.app/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow">
+  <title>Contact Us - India Report</title>
+  <link rel="canonical" href="https://indiareport.netlify.app/contact.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <header>
+    <nav class="modern-navbar" id="site-nav" aria-label="Primary">
+       <div class="brand">INDIA REPORT</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About Me</a></li>
+        <li role="none"><a role="menuitem" href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content reveal">
+    <section>
+      <h1 class="reveal">Contact Us</h1>
+      <p class="reveal">If you have any questions, suggestions, or feedback, feel free to reach out to us using the contact details below.</p>
+
+      <h2 class="reveal">Email</h2>
+      <p class="reveal"><a href="mailto:ashu.8642.ap@gmail.com">ashu.8642.ap@gmail.com</a></p>
+
+      <h2 class="reveal">Phone</h2>
+      <p class="reveal">+91 6307607925</p>
+
+      <h2 class="reveal">Address</h2>
+      <p class="reveal">
+        Near BBD University<br />
+        Ayodhya Road<br />
+        Lucknow, Uttar Pradesh
+      </p>
+
+      <h2 class="reveal">Social Media</h2>
+      <p class="reveal">Follow us on:</p>
+      <ul class="reveal">
+        <li><a href="#" target="_blank">Twitter</a></li>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+  <p><span>&copy; 2025 INDIA REPORT</span> 
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="terms-of-use.html">Terms of Use</a>
+    </p>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "India Report",
+      "url": "https://indiareport.netlify.app",
+      "email": "ashu.8642.ap@gmail.com",
+      "telephone": "+91 6307607925",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near BBD University, Ayodhya Road",
+        "addressLocality": "Lucknow",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "India"
+      },
+      "sameAs": [
+        "https://twitter.com/yourprofile",
+        "https://facebook.com/yourprofile",
+        "https://linkedin.com/company/yourprofile"
+      ]
+    }
+  </script>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+    const siteNav = document.getElementById('site-nav');
+
+    // Mobile menu toggle + accessibility
+    const toggleMenu = () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      // trap focus basic: focus first link when opening
+      if (isOpen) {
+        const firstLink = navLinks.querySelector('a');
+        firstLink && firstLink.focus();
+      }
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Navbar scroll state
+    const handleScroll = () => {
+      if (window.scrollY > 6) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Reveal on scroll
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+
+</html>

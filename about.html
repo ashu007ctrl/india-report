@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Learn about the creator of India Report, Ashutosh Pandey, a student passionate about politics, governance, and public policy analysis." />
+<meta name="keywords"
+    content="Ashutosh Pandey, India Report, Indian Politics, Governance, BJP Analysis, Public Policy, Political Analysis" />
+    <meta name="robots" content="index, follow">
+
+
+    <meta property="og:title" content="About Me – India Report">
+    <meta property="og:description"
+        content="Meet the founder of India Report and explore the motivation behind this politically insightful platform.">
+        <meta property="og:image" content="https://indiareport.netlify.app/images/about.jpg">
+        <meta property="og:url" content="https://indiareport.netlify.app/about.html">
+        <link rel="canonical" href="https://indiareport.netlify.app/about.html">
+        <meta name="author" content="Ashutosh Pandey">
+        <link rel="stylesheet" href="style.css">
+        <!-- Preload and preconnect for faster font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+
+        <title>About Me | India Report</title>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ashutosh Pandey",
+              "url": "https://indiareport.netlify.app/about.html",
+              "sameAs": [],
+              "jobTitle": "Founder, India Report",
+              "description": "B.Tech student passionate about Indian politics, governance, and policy analysis.",
+              "image": "https://indiareport.netlify.app/images/about.jpg"
+            }
+            </script>
+            
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="modern-navbar" id="site-nav" aria-label="Primary">
+           <div class="brand">INDIA REPORT</div>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="nav-links" role="menu">
+            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+            <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+            <li role="none"><a role="menuitem" href="about.html" class="active">About Me</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="main-content reveal">
+
+        <section>
+
+        
+        <h1 class="reveal">About Me</h1>
+        <p class="reveal">Hello! My name is <strong> Ashutosh Pandey</strong> , and I am a B.Tech student with a deep interest in
+            politics, governance, and
+            public policies. Since my early years, I have been keen on understanding how political systems shape
+            societies and influence economic and social development.</p>
+            <p class="reveal"> Read more about <a href="https://pandeyjii.netlify.app"> Ashutosh Pandey </a> , the <strong>owner </strong>of this plateform . </p>
+
+
+        <p class="reveal">As an engineering student, I believe that technical knowledge combined with political awareness can lead to
+            innovative solutions for real-world challenges. I enjoy analyzing political trends, elections, policies, and
+            governance models across different countries to understand their impact on people's lives.</p>
+
+        <h2 class="reveal">Purpose of This Website</h2>
+        <p class="reveal">This website is designed to serve as an informative platform for individuals interested in political studies
+            and current affairs. My goal is to provide insightful case studies, historical perspectives, and analytical
+            reports on major political developments, particularly in India.</p>
+
+        <p class="reveal">Here, you will find discussions on various political ideologies, election strategies, governance policies,
+            and their real-world effects. I also aim to simplify complex political topics to make them accessible to a
+            broader audience.</p>
+           <p class="reveal"> Check out the  <a href="/articles.html">  latest political articles  </a> I've written.</p>
+            
+
+        <p class="reveal">Whether you are a student, researcher, or just someone curious about politics, I hope this website helps you
+            gain a deeper understanding of political landscapes and decision-making processes.</p>
+        </section>
+    </div>
+    <footer>
+      <p><span>&copy; 2025 INDIA REPORT</span> 
+            <a href="https://indiareport.netlify.app/privacy-policy.html">Privacy Policy</a> | <a href="https://indiareport.netlify.app/terms-of-use.html">Terms of Use</a></p>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      const navItems = document.querySelectorAll('.nav-links li a');
+      const siteNav = document.getElementById('site-nav');
+
+      // Mobile menu toggle + accessibility
+      const toggleMenu = () => {
+        const isOpen = navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        // trap focus basic: focus first link when opening
+        if (isOpen) {
+          const firstLink = navLinks.querySelector('a');
+          firstLink && firstLink.focus();
+        }
+      };
+      menuToggle.addEventListener('click', toggleMenu);
+
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+          menuToggle.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          navLinks.classList.remove('show');
+          menuToggle.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Navbar scroll state
+      const handleScroll = () => {
+        if (window.scrollY > 6) {
+          siteNav.classList.add('scrolled');
+        } else {
+          siteNav.classList.remove('scrolled');
+        }
+      };
+      handleScroll();
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      // Reveal on scroll
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+      
+      
+</body>
+
+</html>
