@@ -257,36 +257,42 @@
     </p>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const navItems = document.querySelectorAll('.nav-links li a');
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const navItems = document.querySelectorAll('.nav-links li a');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      menuToggle.classList.toggle('active');
-    });
-
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        menuToggle.classList.remove('active');
-      document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-
-    // Close other open items
-    document.querySelectorAll('.faq-item').forEach(faq => {
-      if (faq !== item) {
-        faq.classList.remove('active');
-      }
-    });
-
-    // Toggle the clicked one
-    item.classList.toggle('active');
+  // Mobile nav toggle
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    menuToggle.classList.toggle('active');
   });
-});
-  </script>
+
+  // Close nav when clicking a link
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      menuToggle.classList.remove('active');
+    });
+  });
+
+  // ✅ FAQ toggle (moved outside the nav loop)
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+
+      // Close other open items
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        if (faq !== item) {
+          faq.classList.remove('active');
+        }
+      });
+
+      // Toggle the clicked one
+      item.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 
 </html>
