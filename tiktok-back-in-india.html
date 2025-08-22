@@ -32,7 +32,75 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+  .faq-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
 
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #0077ff;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1rem;
+}
+
+.faq-answer p {
+  padding: 0.5rem 0;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px; /* enough for long answers */
+  padding: 0.5rem 1rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* turns + into × */
+  color: #0077ff;
+}
+</style>
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -51,6 +119,38 @@
     "articleSection":"Tech & Policy"
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TikTok’s status in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TikTok’s website is accessible for some users in India, but the app is still unavailable on app stores as of 2025."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was TikTok banned in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was banned in June 2020 due to national security and data privacy concerns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TikTok making a comeback?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the website is back for now. For a full comeback, app approval from Indian authorities is required."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -112,19 +212,39 @@
       <h3>7. Bottom Line & What to Watch</h3>
       <p>The comeback of Tiktok will give a positive signal to both thr peoples of India and China that there is no any issue between these countries and things are going on in a positive way. Wait for the official announcements from Tiktok of government to confirns the comeback. For now, short-video creators may continue building on Indian platforms like Instagram, Josh, Moj, or other local alternatives. (See FAQs below for options.)</p>
 
-      <h3>Frequently Asked Questions </h3>
-      <h4>Q: Is TikTok available in India now?</h4>
-      <p>No, only the website is accessible to some users. The mobile app remains blocked as of August 22, 2025. </p>
+      <section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
 
-      <h4>Q: Why was TikTok banned in India?</h4>
-      <p>The June 2020 ban was based on data privacy and national security concerns, along with geopolitical tensions between India and China. </p>
+  <div class="faq-item">
+    <button class="faq-question">
+      What is TikTok’s status in India?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>TikTok’s website is accessible for some users in India, but the app is still unavailable on app stores as of 2025.</p>
+    </div>
+  </div>
 
-      <h4>Q: What are Indian alternatives to TikTok?</h4>
-      <p>Platforms like Instagram, Josh, Moj, and others have filled the short-video gap, especially for regional languages. They offer a creator-friendly environment post-TikTok. </p>
+  <div class="faq-item">
+    <button class="faq-question">
+      Why was TikTok banned in India?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>It was banned in June 2020 due to national security and data privacy concerns.</p>
+    </div>
+  </div>
 
-      <h4>Q: Could TikTok’s app return soon?</h4>
-      <p>That depends on regulatory clearances, local data infrastructure, and public trust. This patchy website access might be a test run—but there's no timeline yet. </p>
-
+  <div class="faq-item">
+    <button class="faq-question">
+      Is TikTok making a comeback?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Only the website is back for now. For a full comeback, app approval from Indian authorities is required.</p>
+    </div>
+  </div>
+</section>
       <p>Explore <a href="articles.html">more stories on India at India Report</a>.</p>
     </section>
   </main>
@@ -151,8 +271,21 @@
       item.addEventListener('click', () => {
         navLinks.classList.remove('show');
         menuToggle.classList.remove('active');
-      });
+      document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+
+    // Close other open items
+    document.querySelectorAll('.faq-item').forEach(faq => {
+      if (faq !== item) {
+        faq.classList.remove('active');
+      }
     });
+
+    // Toggle the clicked one
+    item.classList.toggle('active');
+  });
+});
   </script>
 </body>
 
