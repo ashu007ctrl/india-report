@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://indiareport.netlify.app/sitemap.xml
