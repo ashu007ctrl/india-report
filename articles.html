@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles | India Report</title>
- 
+  <title>कहानियाँ और कविताएँ | Poetify</title>
+
   <meta name="google-site-verification" content="IJsEUItfjW5MInVr2f-OmcGNqFBkZ-dyAMlUxaHe6qg" />
-  
+
   <!-- Primary SEO Meta Tags -->
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Explore top political articles, news, and international updates with bold insights from India Report. Stay informed with expert analysis and key takeaways.">
-  <meta name="keywords" content="India Report, Indian politics, political articles, elections, international news, political news blog, political analysis India">
+  <meta name="description"
+    content="Poetify पर सुंदर कविताओं, कहानियों और साहित्यिक कार्यों का अन्वेषण करें। मौलिक हिंदी सामग्री पढ़ें और हमारी नवीनतम कृतियों को साझा करें।">
+  <meta name="keywords"
+    content="Poetify, Hindi poems, stories, literature, kavita, kahani, writing platform, हिंदी कविता, कहानियाँ">
   <meta name="author" content="Ashutosh Pandey">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Articles | India Report">
-  <meta property="og:description" content="Browse curated political articles, national updates, and global political news with clear insights on India Report.">
-  <meta property="og:image" content="https://indiareport.netlify.app/logo.png">
-  <meta property="og:url" content="https://indiareport.netlify.app/articles.html">
-  <meta property="og:site_name" content="India Report">
+  <meta property="og:title" content="कहानियाँ और कविताएँ | Poetify">
+  <meta property="og:description" content="Poetify पर चुनिंदा हिंदी कविताओं और कहानियों का संग्रह।">
+  <meta property="og:image" content="https://poetify1.netlify.app/logo.png">
+  <meta property="og:url" content="https://poetify1.netlify.app/articles.html">
+  <meta property="og:site_name" content="Poetify">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Articles | India Report – Latest Political News & Opinions">
-  <meta name="twitter:description" content="Discover sharp political articles and deep dives into national and international issues on India Report.">
-  <meta name="twitter:image" content="https://indiareport.netlify.app/logo.png">
+  <meta name="twitter:title" content="कहानियाँ और कविताएँ | Poetify">
+  <meta name="twitter:description" content="Poetify पर दिल को छू लेने वाली कविताएं और आकर्षक कहानियां खोजें।">
+  <meta name="twitter:image" content="https://poetify1.netlify.app/logo.png">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://indiareport.netlify.app/articles.html">
+  <link rel="canonical" href="https://poetify1.netlify.app/articles.html">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -37,8 +39,9 @@
   <!-- Fonts Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -48,139 +51,87 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Political Articles | India Report",
-    "description": "A curated collection of political articles and news from India and around the world. Read expert opinions and analysis on India Report.",
+    "name": "Stories & Poems | Poetify",
+    "description": "A curated collection of Hindi poems and stories.",
     "publisher": {
       "@type": "Organization",
-      "name": "India Report",
+      "name": "Poetify",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://indiareport.netlify.app/logo.png"
+        "url": "https://poetify1.netlify.app/logo.png"
       }
     },
-    "url": "https://indiareport.netlify.app/articles.html"
+    "url": "https://poetify1.netlify.app/articles.html"
   }
   </script>
-</head>
 
   <style>
+    /* Tab Styles tailored for the Book Theme */
     .tabs-container {
-      max-width: 900px;
-      margin: 0 auto;
+      margin-top: 2rem;
     }
 
     .tab-header {
-      background: #9d0dad;
-      color: white;
+      background: var(--surface);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: var(--text-color);
+      font-family: var(--font-heading);
       font-weight: 600;
       padding: 15px 25px;
-      font-size: 20px;
+      font-size: 1.25rem;
       cursor: pointer;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .tab-header:hover {
-      background: #008264;
+      background: rgba(0, 0, 0, 0.02);
+      border-color: var(--brand-color);
+      color: var(--brand-color);
+    }
+
+    .tab-header::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+
+    .tab-header.active {
+      background: var(--brand-color);
+      color: #fff;
+      border-color: var(--brand-color);
+    }
+
+    .tab-header.active::after {
+      content: '−';
+      transform: rotate(180deg);
     }
 
     .tab-content {
       display: none;
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: transparent;
+      padding: 10px 20px 30px;
+      border-left: 2px solid var(--brand-color);
+      margin-left: 10px;
       margin-bottom: 20px;
     }
 
     .tab-content.active {
       display: block;
-      animation: fadeIn 0.5s ease-in-out;
+      animation: slideDown 0.4s ease-out;
     }
 
-    .tab-content p {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0;
-      transition: transform 0.2s, color 0.2s;
-      cursor: pointer;
-      color: #1a0dab;
-    }
-
-    .tab-content p:hover {
-      transform: translateX(5px);
-      text-decoration: underline;
-      color: #9d005e;
-    }
-
-    @keyframes fadeIn {
+    @keyframes slideDown {
       from {
         opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .tab-header {
-        font-size: 18px;
-        padding: 12px 18px;
-      }
-      .tab-content {
-        font-size: 15px;
-      }
-      header {
-        margin-bottom: 20px;
-      }
-    }
-
-    .articles-heading {
-      font-family: 'Poppins', sans-serif;
-      padding: 20px 25px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 20px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    .articles-heading h1 {
-      font-size: 28px;
-      color: #222;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .articles-heading p {
-      font-size: 17px;
-      color: rgb(11, 5, 0);
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    @media (max-width: 600px) {
-      .articles-heading {
-        padding: 15px 18px;
+        transform: translateY(-10px);
       }
 
-      .articles-heading h1 {
-        font-size: 22px;
-      }
-
-      .articles-heading p {
-        font-size: 15px;
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
       to {
         opacity: 1;
         transform: translateY(0);
@@ -190,181 +141,241 @@
     .article-links a {
       display: flex;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: 17px;
-      font-weight: 600;
+      font-family: var(--font-body);
+      font-size: 1.1rem;
       text-decoration: none;
-      color: #111;
-      background: #f5f5f5;
-      padding: 12px 16px;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      position: relative;
+      color: var(--text-color);
+      padding: 12px 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
       counter-increment: article-counter;
     }
 
     .article-links a::before {
-      content: counter(article-counter) ".";
-      font-weight: bold;
-      margin-right: 10px;
-      color: #000;
+      content: "❧";
+      /* Floral leaf bullet */
+      margin-right: 15px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
     }
 
     .article-links a:hover {
-      background-color: #e9ecef;
-      color: #007BFF;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      color: var(--brand-color);
+      padding-left: 10px;
     }
 
-    .article-links {
-      counter-reset: article-counter;
+    .articles-intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .articles-intro p {
+      font-style: italic;
+      color: var(--muted-text);
     }
   </style>
 </head>
 
-  <body>
-    <header>
-        <nav class="modern-navbar" id="site-nav" aria-label="Primary">
-           <div class="brand">INDIA REPORT</div>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav-links" id="nav-links" role="menu">
-            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-            <li role="none"><a role="menuitem" href="articles.html" class="active">Articles</a></li>
-            <li role="none"><a role="menuitem" href="about.html">About Me</a></li>
-            <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
-      </header>
+<body>
+  <header>
+    <nav class="modern-navbar" id="site-nav" aria-label="Primary">
+      <div class="brand">Poetify</div>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html">मुख्य पृष्ठ</a></li>
+        <li role="none"><a role="menuitem" href="articles.html" class="active">रचनाएँ</a></li>
+        <li role="none"><a role="menuitem" href="about.html">हमारे बारे में</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">संपर्क करें</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="main-content reveal">
-        <section>
-          <div class="articles-heading">
-            <h1>Articles & Insights</h1>
-            <p>
-              Welcome to the Articles section of India Report. Here you'll find well-researched, unbiased articles exploring key political themes, government actions, policy debates, and leadership analysis.
-            </p>
-          </div>
-
-          <div class="tabs-container reveal">
-            <div class="tab-header" onclick="toggleTab('news')">📰 News</div>
-            <div class="tab-content" id="news">
-              <div class="article-links">
-                <a href="kendra-scott-engagement-2025.html" target="_blank">Kendra Scott Gets Engaged</a>
-                <a href="trump2v1.html" target="_blank">Trump 2.0 Vs 1.0</a>
-                <a href="tiktok-back-in-india.html" target="_blank">Tiktok Comeback to India</a>
-              </div>
-              </div>
-            </div>
-
-            <div class="tab-header" onclick="toggleTab('articles')">📑 Articles</div>
-            <div class="tab-content" id="articles">
-              <div class="article-links">
-                <a href="why-bjp-rules-india.html" target="_blank">Why BJP Rules India?</a>
-                <a href="pahalgam-attack.html" target="_blank">Pahalgam Terror Attack</a>
-                <a href="operation-sindoor.html" target="_blank">Operation Sindoor</a>
-                <a href="indus-water-treaty.html" target="_blank">Indus Water Treaty</a>
-                <a href="india-pakistan-military-comparison.html" target="_blank">India Vs Pakistan : Military Comparison</a>
-                <a href="history-of-bjp.html" target="_blank">History Of BJP</a>
-                <a href="bjp-welfare-scheme.html" target="_blank">BJP Welfare Schemes</a>
-              </div>
-            </div>
-
-            <div class="tab-header" onclick="toggleTab('election')">🗳️  Politics</div>
-            <div class="tab-content" id="election">
-              <div class="article-links">
-                <a href="why-bjp-lost-ayodhya.html" target="_blank">Why BJP lost Ayodhya 2024</a>
-                <a href="yogi-vs-akhilesh.html" target="_blank">Yogi Adityanath Vs Akhilesh Yadav</a>
-                <a href="modi-vs-rahul.html" target="_blank">Narendra Modi Vs Rahul Gandhi ! Future PM</a>
-                
-               <a href="caste-census.html" target="_blank">Caste Census in India</a>
-            </div>
-            </div>
-
-            <div class="tab-header" onclick="toggleTab('international')">🌍 International</div>
-            <div class="tab-content" id="international">
-              <div class="article-links">
-                   <a href="trump-tariffs-on-india.html" target="_blank">Trump Tariffs on India</a>
-                <a href="when-dubai-almost-became-part-of-india.html" target="_blank">When Dubai almost became part of India</a>
-                <a href="thailand-vs-cambodia.html" target="_blank">Thailand Vs Cambodia</a>
-                <a href="iran-vs-israel.html" target="_blank">Iran Vs Israel 2025</a>
-                <a href="india-tour-of-england-2025.html" target="_blank">India Tour Of England 2025 Test Series</a>
-              </div>
-            </div>
-          </div>
-        </section>
+  <main class="main-content book-page reveal">
+    <section class="chapter-content">
+      <div class="chapter-header">
+        <h1 class="book-title">रचनाएँ</h1>
+        <p class="subtitle">रचनात्मकता और विचारों का संग्रह</p>
       </div>
 
-      <footer>
-      <p><span>&copy; 2025 INDIA REPORT</span> 
-          <a href="privacy-policy.html">Privacy Policy</a> | 
-          <a href="terms-of-use.html">Terms of Use</a></p>
-      </footer>
+      <div class="articles-intro">
+        <p>
+          शब्दों के इस बगीचे में आपका स्वागत है। यहाँ हर रचना एक नया एहसास है—कभी कविता बनकर दिल को गुदगुदाती है, तो कभी
+          कहानी बनकर जीवन का आईना दिखाती है। नीचे दिए गए संग्रह को खंगालें और अपनी पसंद की रचनाओं का आनंद लें।
+        </p>
+      </div>
 
-      <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        const navItems = document.querySelectorAll('.nav-links li a');
-        const siteNav = document.getElementById('site-nav');
+      <div class="tabs-container">
 
-        const toggleMenu = () => {
-          const isOpen = navLinks.classList.toggle('show');
-          menuToggle.classList.toggle('active');
-          menuToggle.setAttribute('aria-expanded', String(isOpen));
-          if (isOpen) {
-            const firstLink = navLinks.querySelector('a');
-            firstLink && firstLink.focus();
-          }
-        };
-        menuToggle.addEventListener('click', toggleMenu);
-        navItems.forEach(item => {
-          item.addEventListener('click', () => {
-            navLinks.classList.remove('show');
-            menuToggle.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          });
-        });
+        <div class="tab-header" onclick="toggleTab('poems', this)">🖊️ कविताएँ</div>
+        <div class="tab-content active" id="poems" style="display: block;"> <!-- Default open -->
+          <div class="article-links">
+            <a href="kendra-scott-engagement-2025.html">केंद्र स्कॉट सगाई 2025</a>
+            <a href="trump2v1.html">ट्रम्प 2.0 बनाम 1.0</a>
+            <a href="tiktok-back-in-india.html">भारत में टिकटॉक की वापसी</a>
+          </div>
+        </div>
 
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            navLinks.classList.remove('show');
-            menuToggle.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
+        <div class="tab-header" onclick="toggleTab('stories', this)">📖 कहानियाँ</div>
+        <div class="tab-content" id="stories">
+          <div class="article-links">
+            <a href="why-bjp-rules-india.html">भाजपा भारत पर शासन क्यों करती है?</a>
+            <a href="pahalgam-attack.html">पहलगाम घटना</a>
+            <a href="operation-sindoor.html">ऑपरेशन सिन्दूर</a>
+            <a href="indus-water-treaty.html">सिंधु जल संधि</a>
+            <a href="india-pakistan-military-comparison.html">भारत बनाम पाकिस्तान: सैन्य तुलना</a>
+            <a href="history-of-bjp.html">भाजपा का इतिहास</a>
+            <a href="bjp-welfare-scheme.html">कल्याणकारी योजनाएँ</a>
+          </div>
+        </div>
 
-        const handleScroll = () => {
-          if (window.scrollY > 6) {
-            siteNav.classList.add('scrolled');
-          } else {
-            siteNav.classList.remove('scrolled');
-          }
-        };
-        handleScroll();
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        <div class="tab-header" onclick="toggleTab('politics', this)">🗳️ राजनीति (संग्रह)</div>
+        <div class="tab-content" id="politics">
+          <div class="article-links">
+            <a href="why-bjp-lost-ayodhya.html">भाजपा अयोध्या 2024 क्यों हारी?</a>
+            <a href="yogi-vs-akhilesh.html">योगी आदित्यनाथ बनाम अखिलेश यादव</a>
+            <a href="modi-vs-rahul.html">नरेंद्र मोदी बनाम राहुल गांधी</a>
+            <a href="caste-census.html">भारत में जाति जनगणना</a>
+          </div>
+        </div>
 
-        const revealObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('reveal-visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.08 });
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        <div class="tab-header" onclick="toggleTab('international', this)">🌍 अंतर्राष्ट्रीय (संग्रह)</div>
+        <div class="tab-content" id="international">
+          <div class="article-links">
+            <a href="trump-tariffs-on-india.html">भारत पर ट्रम्प का शुल्क</a>
+            <a href="when-dubai-almost-became-part-of-india.html">जब दुबई भारत का हिस्सा बनने वाला था</a>
+            <a href="thailand-vs-cambodia.html">थाईलैंड बनाम कंबोडिया</a>
+            <a href="iran-vs-israel.html">ईरान बनाम इज़राइल 2025</a>
+            <a href="india-tour-of-england-2025.html">भारत का इंग्लैंड दौरा 2025</a>
+          </div>
+        </div>
 
-        function toggleTab(id) {
-          const content = document.getElementById(id);
-          const isActive = content.classList.contains('active');
-          document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-          if (!isActive) content.classList.add('active');
+      </div>
+    </section>
+  </main>
+
+  <footer class="modern-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Poetify. All Rights Reserved. <br> <a href="privacy-policy.html">Privacy Policy</a> | <a
+          href="terms-of-use.html">Terms of Use</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle Tabs
+    function toggleTab(id, headerElement) {
+      const content = document.getElementById(id);
+
+      // If clicking already active tab, just close it (optional interaction)
+      // For now, let's keep Accordion style: Close all others, toggle clicked
+
+      // Close all others
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        if (tab.id !== id) tab.style.display = 'none';
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-header').forEach(header => {
+        if (header !== headerElement) header.classList.remove('active');
+      });
+
+      // Toggle current
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        content.classList.remove('active');
+        headerElement.classList.remove('active');
+      } else {
+        content.style.display = 'block';
+        content.classList.add('active');
+        headerElement.classList.add('active');
+      }
+    }
+
+    // Initialize first tab open
+    document.querySelector('.tab-header').classList.add('active');
+
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      html.classList.add('dark');
+    }
+
+    themeBtn.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+    const siteNav = document.getElementById('site-nav');
+
+    const toggleMenu = () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        const firstLink = navLinks.querySelector('a');
+        firstLink && firstLink.focus();
+      }
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Navbar Scroll
+    const handleScroll = () => {
+      if (window.scrollY > 6) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Reveal Animation
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
         }
-      </script>
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
 </body>
 
 </html>
