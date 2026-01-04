@@ -184,16 +184,21 @@ a:hover {
 }
 
 .modern-navbar .nav-links li a {
-    color: var(--text-color);
-    font-size: 1rem;
+    color: black;
+    font-size: 1.2rem;
     font-weight: 500;
     position: relative;
     font-family: var(--font-body);
 }
 
-.modern-navbar .nav-links li a.active,
+.modern-navbar .nav-links li a.active {
+    color: black;
+    text-decoration: underline;
+
+}
+
 .modern-navbar .nav-links li a:hover {
-    color: var(--brand-color);
+    color: rgb(2, 119, 123);
 }
 
 /* Book Page Layout (Home) */
@@ -331,7 +336,7 @@ a:hover {
 .modern-footer {
     background: #0f0f0f;
     color: #aeaeae;
-    padding: 60px 0 20px;
+    padding: 0 20px;
     margin-top: auto;
     font-family: var(--font-body);
     border-top: 3px solid var(--accent-color);
@@ -410,7 +415,7 @@ a:hover {
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
     padding-top: 20px;
     font-size: 0.85rem;
 }
